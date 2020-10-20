@@ -1,10 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Provide sufficient contrast against white background */
+@import '~bootstrap/scss/bootstrap';
 @import 'exo2.scss';
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100vh;
   font-family: 'Exo 2';
+  background-color: rgb(30, 30, 30);
+  color: white;
 }
 
 a {
