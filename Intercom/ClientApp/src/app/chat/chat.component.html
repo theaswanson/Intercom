@@ -20,7 +20,7 @@
     </div>
 
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Message with Intercom" [(ngModel)]="message">
+      <input type="text" class="form-control" placeholder="Message with Intercom" [(ngModel)]="message" (keyup.enter)="send()">
       <div class="input-group-append">
         <button class="btn btn-dark" type="button" (click)="send()">Send</button>
       </div>
