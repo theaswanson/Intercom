@@ -1,0 +1,35 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'exo2.scss';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Exo 2';
+  background-color: rgb(30, 30, 30);
+  color: white;
+}
+
+.body-container {
+  height: 100%;
+}
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+}
