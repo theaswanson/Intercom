@@ -1,8 +1,14 @@
 <div class="chat">
   <div class="messages" (scroll)="scrolled($event)" #scrollframe>
-    <p *ngFor="let chatMessage of messages" #item>
-      {{chatMessage.user}}: {{chatMessage.message}} ({{chatMessage.timeSent | date:'medium'}})
-    </p>
+    <div class="message" *ngFor="let chatMessage of messages" #item>
+      <div class="message-header">
+        <span class="user">{{chatMessage.user}}</span>
+        <span class="time">{{chatMessage.timeSent | date:'medium'}}</span>
+      </div>
+      <div class="message-content">
+        {{chatMessage.message}}
+      </div>
+    </div>
   </div>
 
   <div class="input-area">

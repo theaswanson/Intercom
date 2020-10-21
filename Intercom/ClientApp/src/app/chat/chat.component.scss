@@ -6,5 +6,28 @@
   .messages {
     flex-grow: 1;
     overflow: auto;
+
+    .message {
+      font-size: 1.25rem;
+      padding-bottom: 2rem;
+
+      .message-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .user {
+          padding-right: 1rem;
+        }
+
+        .time {
+          font-size: 0.8rem;
+        }
+      }
+
+      .message-content {
+        font-weight: 200;
+      }
+    }
   }
 }
