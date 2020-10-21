@@ -1,18 +1,30 @@
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 2rem;
+  justify-content: space-between;
+  height: 100%;
 
-  h1 {
-    font-size: 3rem;
-    font-weight: 100;
-    text-transform: uppercase;
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
   }
 
-  p {
-    font-size: 1.5rem;
-    font-weight: 300;
+  .chat-area {
+    max-height: 75vh;
   }
 }

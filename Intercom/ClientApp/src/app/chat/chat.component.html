@@ -1,9 +1,23 @@
-<input type="text" [(ngModel)]="name" />
-<h6>Name: {{name}}</h6>
+<div class="chat">
+  <div class="messages" (scroll)="scrolled($event)" #scrollframe>
+    <p *ngFor="let chatMessage of messages" #item>
+      {{chatMessage.user}}: {{chatMessage.message}} ({{chatMessage.timeSent}})
+    </p>
+  </div>
 
-<input type="text" [(ngModel)]="message" />
-<button class="btn btn-light" (click)="send()">Send</button>
+  <div class="input-area">
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control text-light bg-dark" id="name" [(ngModel)]="name">
+      </div>
+    </div>
 
-<p *ngFor="let chatMessage of messages">
-  {{chatMessage.user}}: {{chatMessage.message}} ({{chatMessage.timeSent}})
-</p>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Message with Intercom" [(ngModel)]="message">
+      <div class="input-group-append">
+        <button class="btn btn-dark" type="button" (click)="send()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
