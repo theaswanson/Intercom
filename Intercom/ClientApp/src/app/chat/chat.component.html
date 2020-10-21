@@ -1,7 +1,7 @@
 <div class="chat">
   <div class="messages" (scroll)="scrolled($event)" #scrollframe>
     <p *ngFor="let chatMessage of messages" #item>
-      {{chatMessage.user}}: {{chatMessage.message}} ({{chatMessage.timeSent}})
+      {{chatMessage.user}}: {{chatMessage.message}} ({{chatMessage.timeSent | date:'medium'}})
     </p>
   </div>
 
